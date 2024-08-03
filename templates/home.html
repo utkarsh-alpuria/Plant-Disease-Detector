@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Agriculture</title>
+    <link rel="stylesheet" href="/static/home.css">
+</head>
+<body>
+    <header class="header">
+        <a href="{{url_for('home')}}" class="nav-text"><span>A</span>GR<span>I</span>CULTURE</a>
+        <nav class="navbar">
+            <a href="{{url_for('home')}}" class="active">Home</a>
+            <a href="{{url_for('potato_select')}}">Potato</a>
+            <a href="{{url_for('tomato_select')}}">Tomato</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <h2 class="home-text">Select a Model</h2>
+        <div class="card-container">
+            <div class="card" >
+                <img src="/static/potato_card_img.png" class="card-img" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Potato Disease</h5>
+                  <p class="card-text">This neural network model can predict the condition with accuracy score of potato plant from image of its leaves.</p>
+                  <form action="/potato" method="post">
+                        <input type="submit" value="SELECT" class="card-btn">
+                  </form>
+                </div>
+              </div>
+              <div class="card" >
+                <img src="/static/tomato_card_img.png" class="card-img" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tomato Disease</h5>
+                  <p class="card-text">This neural network model can predict the condition with accuracy score of tomato plant from image of its leaves.</p>
+                  <form action="/tomato" method="post">
+                    <input type="submit" value="SELECT" class="card-btn">
+                  </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p class="footer-text">Made By  |  Utkarsh Alpuria</p>
+    </footer>
+
+</body>
+</html>
