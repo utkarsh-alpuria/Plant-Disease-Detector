@@ -1,7 +1,6 @@
 tensorflow
 matplotlib
-fastapi
-uvicorn
+flask
 numpy
 jinja2
 flask
