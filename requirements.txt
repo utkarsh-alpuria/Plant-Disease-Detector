@@ -1,0 +1,7 @@
+tensorflow
+matplotlib
+fastapi
+uvicorn
+numpy
+jinja2
+flask
