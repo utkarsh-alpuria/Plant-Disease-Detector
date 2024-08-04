@@ -1,17 +1,25 @@
 # Plant Disease Detector
 
 ## About Project
-This repository contains a web application for detecting diseases in potato and tomato plants with plant leaf images using Convolutional Neural Networks (CNNs).
+This repository contains a web application for detecting diseases in potato and tomato plants with images of plant leaves using Convolutional Neural Networks (CNNs).
+
+## about the CNN Models used in webapp
+1) Patato plant disease classification model
+    - 183,747 trainable parameters.
+    - trained on dataset of 1728 images of potato plant leaves, 256x256 pixle each
+    - accuracy score of around 80%(79.29) on test dataset of 320 images
+
+2) Tomato plant disease classification model
+    - 184,202 trainable parameters.
+    - trained on dataset of 9344 images of tomato plant leaves, 256x256 pixle each
+    - accuracy score of around 88.24% on test dataset of 1216 images.
 
 
 ## Technologies used
-Python - Tensorflow, Numpy, Pandas, Matplotlib, Flask
+Python - Tensorflow, Numpy, Pandas, Matplotlib, flask
 HTML, CSS, JavaScript
 
 ## Project Directory Structure 
-
-- requirements.txt - this file has all the dependencies required to create the python virtual enviornment to run this project.
-
 - training - this folder has two ipynb files 
     - Training.ipynb - this is the file where potato plant disease classification model is trained
     - Training_tomato.ipynb - this is the file where tomato plant disease classification model is trained
@@ -23,7 +31,6 @@ HTML, CSS, JavaScript
     - Inside the PlantVillage folder you will have many folders representing different plant(Bell Pepper, Potato, Tomato) with diseases, delete all the Bell Peper folders, it is not used in the project.
     - now in the training folder create another folder named PlatVillage_tomato and move all the tomato plant folders in this folder from the PlantVillage folder.
 
-**Backend**
 - app.py - this python file have the backend flask server which takes the user input image from frontend web app, loads and apply the trained models and sends the result back to frontend.
 
 - Models - this folder has the saved models after the training
@@ -31,7 +38,6 @@ HTML, CSS, JavaScript
     - 2.keras - this is second version of potato plant disease classification model.
     - tomato_model_1.keras - this is the model for tomato plant disease classification model.
 
-**Frontend**
 - templates - this folder has html files for frontend of flask app
     - home.html - html structure of home page of the web app
     - potato_classify.html - html structure for patato disease classification page
@@ -43,6 +49,7 @@ HTML, CSS, JavaScript
     - classify.css - stylesheet linked to both potato_classify.html and tomato_classify.html
     - classify.js - javascript file linked to both potato_classify.html and tomato_classify.html
 
+- requirements.txt - this file has all the dependencies required to create the python virtual enviornment to run this project.
 
 ## Get started with project
 - make sure python is installed in your machine.
