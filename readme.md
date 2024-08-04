@@ -1,7 +1,5 @@
 #  Plant Disease Detector 🌱
 
----
-
 ## 📋 About the Project
 This repository contains a web application designed to detect diseases in potato and tomato plants using Convolutional Neural Networks (CNNs) based on images of plant leaves.
 
