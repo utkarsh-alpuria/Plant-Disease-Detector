@@ -89,6 +89,3 @@ This repository contains a web application designed to detect diseases in potato
 3. Click the "Predict" button.
 4. The condition of the plant along with the confidence score will appear on the screen.
 
----
-
-Feel free to adjust any sections as needed!
