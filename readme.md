@@ -1,70 +1,96 @@
-# Plant Disease Detector
+#  Plant Disease Detector 🌱
 
-## About Project
-This repository contains a web application for detecting diseases in potato and tomato plants with images of plant leaves using Convolutional Neural Networks (CNNs).
+---
 
-## about the CNN Models used in webapp
-1) Patato plant disease classification model
-    - 183,747 trainable parameters.
-    - trained on dataset of 1728 images of potato plant leaves, 256x256 pixle each
-    - accuracy score of around 80%(79.29) on test dataset of 320 images
+## 📋 About the Project
+This repository contains a web application designed to detect diseases in potato and tomato plants using Convolutional Neural Networks (CNNs) based on images of plant leaves.
 
-2) Tomato plant disease classification model
-    - 184,202 trainable parameters.
-    - trained on dataset of 9344 images of tomato plant leaves, 256x256 pixle each
-    - accuracy score of around 88.24% on test dataset of 1216 images.
+## 🤖 CNN Models Used in the Web App
 
+1. **Potato Plant Disease Classification Model**
+   - 🧩 183,747 trainable parameters
+   - 📷 Trained on a dataset of 1,728 images of potato plant leaves (256x256 pixels each)
+   - 🎯 Accuracy score: ~80% (79.29%) on a test dataset of 320 images
 
-## Technologies used
-Python - Tensorflow, Numpy, Pandas, Matplotlib, flask
-HTML, CSS, JavaScript
+2. **Tomato Plant Disease Classification Model**
+   - 🧩 184,202 trainable parameters
+   - 📷 Trained on a dataset of 9,344 images of tomato plant leaves (256x256 pixels each)
+   - 🎯 Accuracy score: ~88.24% on a test dataset of 1,216 images
 
-## Project Directory Structure 
-- training - this folder has two ipynb files 
-    - Training.ipynb - this is the file where potato plant disease classification model is trained
-    - Training_tomato.ipynb - this is the file where tomato plant disease classification model is trained
+## 🛠️ Technologies Used
+- **Python**: TensorFlow, NumPy, Pandas, Matplotlib, Flask
+- **Frontend**: HTML, CSS, JavaScript
 
-    **To Go through model the training again**
-    - If you want to train the model again or fine tune it you can use these two files, but first you have to download the dataset
-    - The dataset used is from https://www.kaggle.com/datasets/arjuntejaswi/plant-village. 
-    - download the dataset, unzip the dataset file, you will find a PlantVillage folder in it. Transfer the folder in the training folder.
-    - Inside the PlantVillage folder you will have many folders representing different plant(Bell Pepper, Potato, Tomato) with diseases, delete all the Bell Peper folders, it is not used in the project.
-    - now in the training folder create another folder named PlatVillage_tomato and move all the tomato plant folders in this folder from the PlantVillage folder.
+## 📂 Project Directory Structure
 
-- app.py - this python file have the backend flask server which takes the user input image from frontend web app, loads and apply the trained models and sends the result back to frontend.
+- **training**: Contains Jupyter notebooks for model training
+  - `Training.ipynb`: For training the potato plant disease classification model
+  - `Training_tomato.ipynb`: For training the tomato plant disease classification model
 
-- Models - this folder has the saved models after the training
-    - 1.keras - this is first version of potato plant disease classification model.
-    - 2.keras - this is second version of potato plant disease classification model.
-    - tomato_model_1.keras - this is the model for tomato plant disease classification model.
+  **To Retrain or Fine-Tune the Model**
+  - Download the dataset from [Kaggle PlantVillage Dataset](https://www.kaggle.com/datasets/arjuntejaswi/plant-village).
+  - Unzip the dataset and move the `PlantVillage` folder into the `training` directory.
+  - Delete all folders related to Bell Pepper in the `PlantVillage` folder as they are not used in this project.
+  - Create a new folder named `PlantVillage_tomato` within `training` and move all tomato plant folders into this folder.
 
-- templates - this folder has html files for frontend of flask app
-    - home.html - html structure of home page of the web app
-    - potato_classify.html - html structure for patato disease classification page
-    - tomato_classify.html - html structure for tomato disease classification page
+- **app.py**: Contains the backend Flask server, which handles user input, applies the trained models, and returns results to the frontend.
 
-- static - this folder has an assets folder,  css and javascript files for the fontend
-    - assets - this folder has images used in frontend of website
-    - home.css - stylesheet linked to home.html file
-    - classify.css - stylesheet linked to both potato_classify.html and tomato_classify.html
-    - classify.js - javascript file linked to both potato_classify.html and tomato_classify.html
+- **Models**: Saved models after training
+  - `1.keras`: First version of the potato plant disease classification model
+  - `2.keras`: Second version of the potato plant disease classification model
+  - `tomato_model_1.keras`: Tomato plant disease classification model
 
-- requirements.txt - this file has all the dependencies required to create the python virtual enviornment to run this project.
+- **templates**: HTML files for the frontend of the Flask app
+  - `home.html`: Home page structure
+  - `potato_classify.html`: Potato disease classification page
+  - `tomato_classify.html`: Tomato disease classification page
 
-## Get started with project
-- make sure python is installed in your machine.
-- clone the project repository or download the zip file.
-- open the project folder in vs code or any other IDE
-- Create a virtual environment within the project folder using the command `python -m venv <name_of_virtual_environment>`.
-- Activate the virtual environment with the command `.\<name_of_virtual_environment>\Scripts\activate`.
-- In your code editor's terminal, install project dependencies with pip install `-r requirements.txt`.
-- Run app.py file
-- It will show few tensorflow warnings in terminal and then a http localhost link with port(`http://127.0.0.1:5000`) will appear in the terminal. 
-- when you see  (`* Debugger is active!`) in terminal kopy the localhost link and pased it in your browswe and hit enter.
-- you will see the web app home page.
+- **static**: Contains assets, CSS, and JavaScript files for the frontend
+  - **assets**: Images used in the frontend
+  - `home.css`: Stylesheet for `home.html`
+  - `classify.css`: Stylesheet for both `potato_classify.html` and `tomato_classify.html`
+  - `classify.js`: JavaScript file for both `potato_classify.html` and `tomato_classify.html`
 
-## How to Interact or use the Web App
-- in home page you will se two models for different plants, select abny one of you choice.
-- new page will appear where you can give the image of leaf of the plant to.
-- after uploading the image click on predict button
-- the condition with score will appear on the screen
+- **requirements.txt**: Lists all dependencies required to create the Python virtual environment for the project.
+
+## 🚀 Get Started with the Project
+
+1. Ensure Python is installed on your machine.
+2. Clone the project repository or download the zip file.
+3. Open the project folder in VS Code or any other IDE.
+4. Create a virtual environment using:
+   ```bash
+   python -m venv <name_of_virtual_environment>
+   ```
+5. Activate the virtual environment:
+   - On Windows:
+     ```bash
+     .\<name_of_virtual_environment>\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```bash
+     source <name_of_virtual_environment>/bin/activate
+     ```
+6. Install project dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+7. Run `app.py`:
+   ```bash
+   python app.py
+   ```
+   - You may see TensorFlow warnings and a localhost link (e.g., `http://127.0.0.1:5000`) in the terminal.
+   - When you see `* Debugger is active!`, copy the localhost link and paste it into your browser.
+
+8. You will be redirected to the web app's home page.
+
+## 🖥️ How to Use the Web App
+
+1. On the home page, select the model for the plant you want to check.
+2. Upload an image of the plant leaf.
+3. Click the "Predict" button.
+4. The condition of the plant along with the confidence score will appear on the screen.
+
+---
+
+Feel free to adjust any sections as needed!
