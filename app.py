@@ -7,10 +7,10 @@ import tensorflow as tf
 
 app = Flask(__name__)
 
-MODEL_PATATO = tf.keras.models.load_model(r"C:\Users\utkarsh.alpuria\Desktop\My Work\Python\Python ML\Potato_Disease_1-main\Models\2.keras")
+MODEL_PATATO = tf.keras.models.load_model(r"Models\2.keras")
 CLASS_NAMES_PATATO = ['Early Blight', 'Late Blight', 'Healthy']
 
-MODEL_TOMATO = tf.keras.models.load_model(r"C:\Users\utkarsh.alpuria\Desktop\My Work\Python\Python ML\Potato_Disease_1-main\Models\tomato_model_1.keras")
+MODEL_TOMATO = tf.keras.models.load_model(r"Models\tomato_model_1.keras")
 CLASS_NAMES_TOMATO = ['Bacterial Spot', 'Early Blight', 'Late Blight', 'Leaf Mold', 'Septoria Leaf Spot', 'Spider Mites', 'YellowLeaf Curl Virus', 'Target Spot', 'Healthy', 'Mosaic Virus']
 
 @app.route("/")
