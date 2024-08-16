@@ -91,3 +91,5 @@ This repository contains a web application designed to detect diseases in potato
 3. Click the "Predict" button.
 4. The condition of the plant along with the confidence score will appear on the screen.
 
+![tomato classification cover image](https://github.com/utkarsh-alpuria/Plant-Disease-Detector/blob/main/static/assets/tomato_classification_page_cover_img.png) ![tomato classification cover image 2](https://github.com/utkarsh-alpuria/Plant-Disease-Detector/blob/main/static/assets/tomato_classification_page_cover_img_2.png)
+
