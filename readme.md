@@ -3,7 +3,7 @@
 ## 📋 About the Project
 This repository contains a web application designed to detect diseases in potato and tomato plants using Convolutional Neural Networks (CNNs) based on images of plant leaves.
 
-![Home Page Cover Image](https://github.com/utkarsh-alpuria/Plant-Disease-Detector/blob/main/static/assets/home_page_cover_img.png)
+![Plant Disease Readme Cover Image](https://github.com/utkarsh-alpuria/Plant-Disease-Detector/blob/main/static/assets/Plat_disease_readme_cover_img.png)
 
 ## 🤖 CNN Models Used in the Web App
 
